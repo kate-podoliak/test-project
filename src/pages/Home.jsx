@@ -1,44 +1,78 @@
 import '../assets/styles/Home.scss';
 import home_1 from '../assets/img/home_1.webp';
 import home_2 from '../assets/img/home_2.webp';
-import star from '../assets/img/star.svg';
+import star_1 from '../assets/img/star_1.svg';
+import star_2 from '../assets/img/star_2.svg';
+import star_3 from '../assets/img/star_3.svg';
 import about_1 from '../assets/img/about_1.webp';
-import accomm_1 from '../assets/img/accomm_1.webp';
-import accomm_2 from '../assets/img/accomm_2.webp';
-import accomm_3 from '../assets/img/accomm_3.webp';
-import accomm_4 from '../assets/img/accomm_4.webp';
+import accomm_1 from '../assets/img/accomm_1.png';
+import accomm_2 from '../assets/img/accomm_2.png';
+import accomm_3 from '../assets/img/accomm_3.png';
+import accomm_4 from '../assets/img/accomm_4.png';
 import rest_1 from '../assets/img/rest_1.webp';
-import art_1 from '../assets/img/art_1.webp';
-import art_2 from '../assets/img/art_2.webp';
+import art_1 from '../assets/img/art_1.png';
+import art_2 from '../assets/img/art_2.png';
 import Slots from "../components/Slots";
-import React from "react";
+import React, { useEffect } from "react";
 
 function Home() {
+    const handleScroll = () => {
+        const sections = document.querySelectorAll('.section');
+
+        sections.forEach((section, index) => {
+            const rect = section.getBoundingClientRect();
+            const inView = rect.top < window.innerHeight && rect.bottom >= 0;
+
+            if (inView) {
+                section.classList.add('fade-in');
+                section.classList.remove('fade-out');
+
+                // Добавление уникального класса с задержкой
+                section.classList.add(`fade-in-${section.id}`);
+            } else {
+                section.classList.remove('fade-in');
+                section.classList.add('fade-out');
+
+                // Удаление уникального класса
+                section.classList.remove(`fade-in-${section.id}`);
+            }
+        });
+    };
+
+    useEffect(() => {
+        window.addEventListener('scroll', handleScroll);
+        handleScroll(); // Для первоначальной загрузки
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
+
     return (
         <main className='main container'>
             <section className='home section'>
                 <div className="home-img img-container1">
-                    <img src={home_1} alt="Home 1" className="home-img"/>
+                    <img src={home_1} alt="Home 1" className="home-img" />
                 </div>
                 <div className="home-title">
                     <div className="stars">
                         <div className="item-star">
-                            <img src={star} width="32" height="32" alt="Star"/>
+                            <img src={star_1} width="32" height="32" alt="Star" />
                         </div>
                         <div className="item-star">
-                            <img src={star} width="32" height="32" alt="Star"/>
+                            <img src={star_2} width="32" height="32" alt="Star" />
                         </div>
                         <div className="item-star">
-                            <img src={star} width="32" height="32" alt="Star"/>
+                            <img src={star_3} width="32" height="32" alt="Star" />
                         </div>
                     </div>
                     <h1>Landgoed Huize De Vries met Speelcasino l Culinair Genot</h1>
                 </div>
                 <div className="home-img img-container2">
-                    <img src={home_2} alt="Home 2" className="home-img"/>
+                    <img src={home_2} alt="Home 2" className="home-img" />
                 </div>
             </section>
-            <section className='about section' id="about">
+            <section className='about section fade-out' id="about">
                 <div>
                     <h2 className="section-title">Over ons</h2>
                 </div>
@@ -52,11 +86,11 @@ function Home() {
                             onvergetelijke ervaring.</p>
                     </div>
                     <div className='about-container-2'>
-                        <img src={about_1} alt="About"/>
+                        <img src={about_1} alt="About" />
                     </div>
                 </div>
             </section>
-            <section className='accomm section' id="accommodation">
+            <section className='accomm section fade-out' id="accommodation">
                 <div>
                     <h2 className="section-title">Accommodatie & casino</h2>
                 </div>
@@ -70,20 +104,20 @@ function Home() {
                 </div>
                 <div className='accomm-img'>
                     <div className='accomm-img-container'>
-                        <img src={accomm_1} alt="Accommodation 1"/>
+                        <img src={accomm_1} alt="Accommodation 1" />
                     </div>
                     <div className='accomm-img-container'>
-                        <img src={accomm_2} alt="Accommodation 2"/>
+                        <img src={accomm_2} alt="Accommodation 2" />
                     </div>
                     <div className='accomm-img-container'>
-                        <img src={accomm_3} alt="Accommodation 3"/>
+                        <img src={accomm_3} alt="Accommodation 3" />
                     </div>
                     <div className='accomm-img-container'>
-                        <img src={accomm_4} alt="Accommodation 4"/>
+                        <img src={accomm_4} alt="Accommodation 4" />
                     </div>
                 </div>
             </section>
-            <section className='rest section' id="restaurants">
+            <section className='rest section fade-out' id="restaurants">
                 <div>
                     <h2 className="section-title">Restaurants en Culinair</h2>
                 </div>
@@ -95,7 +129,7 @@ function Home() {
                             liefhebbers.</p>
                     </div>
                     <div className="rest-img-container">
-                        <img src={rest_1} alt="Restaurants"/>
+                        <img src={rest_1} alt="Restaurants" />
                     </div>
                     <div className='rest-text-2 text-18-14'>
                         <p>Landgoed De Eikenboom met casino lounge biedt een unieke kans om jezelf onder te dompelen in
@@ -105,7 +139,7 @@ function Home() {
                     </div>
                 </div>
             </section>
-            <section className='art section' id="art">
+            <section className='art section fade-out' id="art">
                 <div>
                     <h2 className="section-title">Kunst & casino</h2>
                 </div>
@@ -120,18 +154,18 @@ function Home() {
                 </div>
                 <div className='block-img'>
                     <div className='img'>
-                        <img src={art_1} alt="Art 1"/>
+                        <img src={art_1} alt="Art 1" />
                     </div>
                     <div className='img'>
-                        <img src={art_2} alt="Art 2"/>
+                        <img src={art_2} alt="Art 2" />
                     </div>
                 </div>
             </section>
-            <section className='game section'>
+            <section className='game section fade-out' id="game">
                 <div>
                     <h2 className="game-title">Spelkamer casino</h2>
                 </div>
-                <Slots/>
+                <Slots />
             </section>
         </main>
     );

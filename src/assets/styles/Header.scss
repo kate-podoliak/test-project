@@ -1,6 +1,7 @@
 .header {
   padding: 5px 0;
-  background: #63631e;
+  background: #002147;
+  color: #F5F5F5;
 
   .logo-container {
     display: block;
@@ -74,7 +75,6 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background-color: #99992c;
         flex-direction: column;
         justify-content: center;
         align-items: center;
@@ -87,11 +87,13 @@
         &.nav-open {
           opacity: 1;
           visibility: visible;
+          background: #002147;
         }
 
         .nav-list {
           flex-direction: column;
           gap: 50px;
+          color: #F5F5F5;
         }
 
         .nav-close {

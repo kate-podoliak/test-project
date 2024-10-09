@@ -28,8 +28,8 @@ html, body {
 body {
     font-family: "Raleway", sans-serif;
     font-size: 18px;
-    color: #fff;
-    background: #99992c;
+    //background: #99992c;
+    background: #F5F5F5;
 }
 
 a {
@@ -53,6 +53,7 @@ button:hover {
 
 main {
     flex-grow: 1;
+    color: #002147;
 }
 
 .App {
@@ -100,15 +101,17 @@ main {
 
             &:hover {
                 cursor: pointer;
-                color: #d18f13;
+                color: #FFD700;
             }
         }
     }
 }
 
-.game {
+.game-page {
     padding-top: 160px;
+}
 
+.game, .game-page {
     @media (max-width: 991px) {
         padding-top: 130px;
     }
@@ -153,7 +156,7 @@ main {
 }
 
 .not-found {
-    margin: 250px 0 180px;
+    margin: 250px auto 180px;
     text-align: center;
     line-height: 1.3;
 

@@ -1,6 +1,6 @@
 import React from 'react';
-import game_1 from "../assets/img/game_1.webp";
-import game_2 from "../assets/img/game_2.webp";
+import game_1 from "../assets/img/game_1.jpeg";
+import game_2 from "../assets/img/game_2.jpeg";
 
 function Slots() {
 

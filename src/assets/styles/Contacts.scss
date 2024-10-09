@@ -1,5 +1,6 @@
 .contacts {
   margin: 160px 0 180px;
+  color: #002147;
 
   .contacts-title {
     font-family: 'Croissant One', sans-serif;
@@ -44,22 +45,24 @@
         line-height: 1;
         font-weight: 400;
         color: white;
-        border: 2px solid #ffa500;
+        border: 2px solid #002147;
         border-bottom-color: transparent;
         transition: border-color .3s ease-in-out;
         background-color: transparent;
         padding: 0 16px;
+        border-radius: 15px;
+
         width: 100%;
         min-height: 55px;
 
         &::placeholder {
-          color: #ffffff;
+          color: #002147;
           opacity: .7;
         }
 
         &:focus-visible {
           border: 2px solid transparent;
-          border-bottom-color: #d18f13;
+          border-bottom-color: #FFD700;
         }
       }
     }
@@ -75,21 +78,22 @@
       min-height: 55px;
       font-size: 16px;
       line-height: 1;
-      color: #ffffff;
-      background-color: #ffa500;
-      border: 2px solid #ffffff;
+      color: #002147;
+      background-color: inherit;
+      border-radius: 15px;
+      border: 2px solid #FFD700;
       border-top-color: transparent;
       transition: border-color .3s ease-in-out;
 
       &:active {
         border: 2px solid transparent;
-        border-top-color: #ffffff;
+        border-top-color: #FFD700;
         transition-duration: .1s;
       }
 
       &:hover {
         border: 2px solid transparent;
-        border-top-color: #ffffff;
+        border-top-color: #FFD700;
       }
 
     }

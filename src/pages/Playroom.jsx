@@ -5,7 +5,7 @@ function Playroom() {
 
     return (
         <main className='container'>
-            <section className='game section'>
+            <section className='game-page section'>
                 <div>
                     <h2 className="game-title">Spelkamer</h2>
                 </div>
