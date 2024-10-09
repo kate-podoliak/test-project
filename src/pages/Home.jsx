@@ -27,13 +27,10 @@ function Home() {
                 section.classList.add('fade-in');
                 section.classList.remove('fade-out');
 
-                // Добавление уникального класса с задержкой
                 section.classList.add(`fade-in-${section.id}`);
             } else {
                 section.classList.remove('fade-in');
                 section.classList.add('fade-out');
-
-                // Удаление уникального класса
                 section.classList.remove(`fade-in-${section.id}`);
             }
         });
@@ -41,7 +38,7 @@ function Home() {
 
     useEffect(() => {
         window.addEventListener('scroll', handleScroll);
-        handleScroll(); // Для первоначальной загрузки
+        handleScroll();
 
         return () => {
             window.removeEventListener('scroll', handleScroll);
