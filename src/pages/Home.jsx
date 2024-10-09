@@ -1,17 +1,17 @@
 import '../assets/styles/Home.scss';
-import home_1 from '../assets/img/home_1.webp';
-import home_2 from '../assets/img/home_2.webp';
+import home_1 from '../assets/img/home_1.jpg';
+import home_2 from '../assets/img/home_2.jpg';
 import star_1 from '../assets/img/star_1.svg';
 import star_2 from '../assets/img/star_2.svg';
 import star_3 from '../assets/img/star_3.svg';
-import about_1 from '../assets/img/about_1.webp';
-import accomm_1 from '../assets/img/accomm_1.png';
-import accomm_2 from '../assets/img/accomm_2.png';
-import accomm_3 from '../assets/img/accomm_3.png';
-import accomm_4 from '../assets/img/accomm_4.png';
-import rest_1 from '../assets/img/rest_1.webp';
-import art_1 from '../assets/img/art_1.png';
-import art_2 from '../assets/img/art_2.png';
+import about_1 from '../assets/img/about_1.jpg';
+import accomm_1 from '../assets/img/accomm_1.jpg';
+import accomm_2 from '../assets/img/accomm_2.jpg';
+import accomm_3 from '../assets/img/accomm_3.jpg';
+import accomm_4 from '../assets/img/accomm_4.jpg';
+import rest_1 from '../assets/img/rest_1.jpg';
+import art_1 from '../assets/img/art_1.jpg';
+import art_2 from '../assets/img/art_2.jpg';
 import Slots from "../components/Slots";
 import React, { useEffect } from "react";
 
